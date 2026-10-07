@@ -1,17 +1,18 @@
-# Glow Para TN
+# Maison Layali
 
-Site web démo – Cosmétiques & Parapharmacie Tunisie
+**Perfume & Beauty** – Site web démo Tunisie
 
 ## Fonctionnalités
+- Logo officiel Layali
 - Animation d'intro élégante
-- Produits avec prix réels du marché tunisien (2026)
-- Marques : La Roche-Posay, Avène, SVR, Nivea...
-- Design responsive premium
-- Prêt à partager au client
+- Bouton WhatsApp flottant
+- Produits avec prix réels du marché tunisien
+- Design premium responsive
 
 ## Liens
 - GitHub : https://github.com/mzsalem22-boop/glow-para-tn
-- Netlify : (à déployer)
+- Netlify : https://glow-para-tn.netlify.app
 
-## Prix sources
-Prix relevés sur Primini, Parapharm.tn, Pharma-Shop et autres parapharmacies en ligne en Tunisie (octobre 2026).
+## Déploiement
+Connectez ce repo à Netlify (Import from Git) pour mettre le site en ligne.
+Ajoutez le fichier `logo.png` (logo officiel) à la racine du repo.
