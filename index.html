@@ -1,163 +1,233 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="light">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Maison Layali | Parfum & Beauté</title>
-  <meta name="description" content="Maison Layali – Parfum & Beauté. Parfums orientaux et soins. Commandez sur WhatsApp." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="logo.png" type="image/png" />
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+<title>Maison Layali | Parfums & Cosmétiques Premium – Tunisie</title>
+<meta name="description" content="Maison Layali – Parfums et cosmétiques premium à 20 Mars, Tunisie. Beauty in Bloom. Commandez sur WhatsApp."/>
+<meta name="theme-color" content="#f7f0ea"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="icon" href="logo.png" type="image/png"/>
+<style>
+:root{--bg:#f7f0ea;--bg2:#f0e6dc;--card:#fffcf9;--ink:#2c241c;--muted:#7a6e64;--rose:#c9a09a;--rose2:#b88880;--gold:#c4a574;--line:rgba(44,36,28,.08);--shadow:0 12px 40px rgba(44,36,28,.08);--radius:18px;--header:72px;--safe-b:env(safe-area-inset-bottom,0px)}
+[data-theme="dark"]{--bg:#1a1512;--bg2:#241e1a;--card:#2a2320;--ink:#f3ebe3;--muted:#b0a59a;--line:rgba(243,235,227,.08);--shadow:0 12px 40px rgba(0,0,0,.35)}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:Jost,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55;overflow-x:hidden}
+img{max-width:100%;display:block}a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}
+.container{width:min(1180px,92%);margin:0 auto}h1,h2,h3,.serif{font-family:"Cormorant Garamond",serif}
+#intro{position:fixed;inset:0;z-index:9999;background:#1a1510;display:flex;align-items:center;justify-content:center;flex-direction:column;transition:opacity .9s,visibility .9s}
+#intro.hide{opacity:0;visibility:hidden;pointer-events:none}#intro canvas{position:absolute;inset:0;width:100%;height:100%}
+.intro-inner{position:relative;z-index:2;text-align:center;padding:2rem}
+.intro-logo{width:min(220px,55vw);margin:0 auto 1.2rem;opacity:0;transform:translateY(16px);animation:up .9s .3s forwards}
+.intro-logo img{width:100%;filter:drop-shadow(0 8px 28px rgba(196,165,116,.3));animation:pulseGlow 2.5s ease-in-out infinite}
+.intro-sig{font-family:"Cormorant Garamond",serif;letter-spacing:.35em;text-transform:uppercase;color:#c4a574;font-size:.85rem;opacity:0;transform:translateY(16px);animation:up .8s 1s forwards}
+.intro-skip{position:absolute;bottom:28px;right:24px;z-index:3;background:transparent;border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.7);padding:.55rem 1rem;border-radius:999px;cursor:pointer;font-size:.8rem;min-height:44px}
+@keyframes up{to{opacity:1;transform:none}}
+@keyframes pulseGlow{0%,100%{filter:drop-shadow(0 8px 28px rgba(196,165,116,.3))}50%{filter:drop-shadow(0 12px 40px rgba(196,165,116,.55))}}
+@keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@keyframes waPulse{0%,100%{box-shadow:0 6px 24px rgba(37,211,102,.45)}50%{box-shadow:0 8px 32px rgba(37,211,102,.7)}}
+.header{position:sticky;top:0;z-index:100;height:var(--header);background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.header-in{height:100%;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.logo{display:flex;align-items:center;gap:.6rem}.logo img{width:42px;height:42px;object-fit:contain}
+.logo span{font-family:"Cormorant Garamond",serif;font-size:1.25rem;font-weight:600}
+.nav-d{display:none;gap:1.6rem;align-items:center}.nav-d a{font-size:.88rem;font-weight:500;color:var(--muted)}.nav-d a:hover{color:var(--ink)}
+.hdr-actions{display:flex;align-items:center;gap:.35rem}
+.icon-btn{width:44px;height:44px;border:none;background:transparent;border-radius:50%;display:grid;place-items:center;cursor:pointer;color:var(--ink);position:relative}
+.badge-n{position:absolute;top:6px;right:6px;min-width:16px;height:16px;background:var(--rose2);color:#fff;font-size:.65rem;border-radius:99px;display:grid;place-items:center;padding:0 4px;font-weight:600}
+.nav-m{position:fixed;bottom:0;left:0;right:0;z-index:90;background:var(--card);border-top:1px solid var(--line);display:flex;justify-content:space-around;padding:.4rem 0 calc(.4rem + var(--safe-b))}
+.nav-m a,.nav-m button{flex:1;display:flex;flex-direction:column;align-items:center;gap:.15rem;font-size:.65rem;color:var(--muted);background:none;border:none;padding:.35rem;cursor:pointer;min-height:48px}
+.hero{padding:2.5rem 0 3rem}.hero-grid{display:grid;gap:2rem;align-items:center}
+.hero-badge{display:inline-block;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--rose2);background:color-mix(in srgb,var(--rose) 18%,transparent);padding:.35rem .9rem;border-radius:99px;margin-bottom:1rem;font-weight:500}
+.hero h1{font-size:clamp(2.2rem,6vw,3.6rem);font-weight:700;line-height:1.12;margin-bottom:1rem;background:linear-gradient(135deg,#2c241c 30%,#b88880);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero p{color:var(--muted);max-width:420px;margin-bottom:1.6rem;font-weight:300}
+.hero-cta{display:flex;flex-wrap:wrap;gap:.8rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.4rem;min-height:48px;padding:.75rem 1.5rem;border-radius:999px;font-weight:500;font-size:.92rem;border:none;cursor:pointer;transition:transform .2s,box-shadow .2s}
+.btn-primary{background:linear-gradient(135deg,#2c241c,#4a3f35);color:var(--bg);position:relative;overflow:hidden}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+.btn-ghost{background:transparent;border:1.5px solid var(--ink);color:var(--ink)}
+.btn-wa{background:#25D366;color:#fff}
+.hero-visual{position:relative;border-radius:24px;overflow:hidden;aspect-ratio:4/5;max-height:520px;box-shadow:var(--shadow);background:var(--bg2);animation:floatY 6s ease-in-out infinite}
+.hero-visual img{width:100%;height:100%;object-fit:cover}
+section{padding:3.5rem 0}.sec-label{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--rose2);font-weight:500;margin-bottom:.5rem}
+.sec-title{font-size:clamp(1.7rem,4vw,2.4rem);font-weight:700;margin-bottom:.4rem;letter-spacing:-.02em}
+.sec-sub{color:var(--muted);font-weight:300;margin-bottom:2rem}
+.cats{display:grid;grid-template-columns:repeat(2,1fr);gap:.8rem}
+.cat{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:1.2rem 1rem;text-align:center;cursor:pointer;transition:transform .25s,box-shadow .25s;min-height:88px}
+.cat:hover{transform:translateY(-3px);box-shadow:var(--shadow)}.cat span{display:block;font-size:1.6rem;margin-bottom:.4rem}
+.cat strong{font-family:"Cormorant Garamond",serif;font-size:1.1rem}
+.toolbar{display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:1.5rem;align-items:center}
+.filter-chip{padding:.45rem 1rem;border-radius:99px;border:1px solid var(--line);background:var(--card);color:var(--muted);cursor:pointer;font-size:.85rem;min-height:44px}
+.filter-chip.active{background:var(--ink);color:var(--bg);border-color:var(--ink);box-shadow:0 4px 16px rgba(44,36,28,.2)}
+.search-in{flex:1;min-width:160px;padding:.65rem 1rem;border-radius:99px;border:1px solid var(--line);background:var(--card);color:var(--ink);min-height:44px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.card{background:var(--card);border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);transition:transform .3s,box-shadow .3s;display:flex;flex-direction:column;transform-style:preserve-3d}
+.card:hover{transform:translateY(-8px) rotateX(2deg);box-shadow:0 20px 50px rgba(44,36,28,.14)}
+.card-img{position:relative;aspect-ratio:1;background:var(--bg2);overflow:hidden}
+.card-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}.card:hover .card-img img{transform:scale(1.06)}
+.card-badge{position:absolute;top:10px;left:10px;background:var(--ink);color:var(--bg);font-size:.65rem;padding:.25rem .55rem;border-radius:99px;font-weight:600}
+.card-fav{position:absolute;top:8px;right:8px;width:44px;height:44px;border-radius:50%;border:none;background:rgba(255,255,255,.92);cursor:pointer;display:grid;place-items:center}
+.card-body{padding:1rem;display:flex;flex-direction:column;gap:.35rem;flex:1}
+.card-brand{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--rose2);font-weight:500}
+.card-name{font-family:"Cormorant Garamond",serif;font-size:1.05rem;font-weight:600}
+.card-price{font-weight:600;font-size:.95rem;margin-top:auto}
+.card-actions{display:flex;gap:.4rem;margin-top:.6rem}.card-actions .btn{flex:1;min-height:44px;padding:.5rem;font-size:.8rem}
+.why-grid{display:grid;gap:1rem}.why-card{background:var(--card);border-radius:var(--radius);padding:1.4rem;border:1px solid var(--line)}
+.contact-box{background:linear-gradient(135deg,var(--bg2),color-mix(in srgb,var(--rose) 12%,var(--bg)));border-radius:24px;padding:2rem;display:grid;gap:1.5rem}
+.contact-links{display:flex;flex-wrap:wrap;gap:.6rem}
+.footer{background:var(--ink);color:color-mix(in srgb,var(--bg) 75%,transparent);padding:2.5rem 0 calc(5rem + var(--safe-b))}
+.footer strong{color:var(--bg);font-family:"Cormorant Garamond",serif}
+.footer a{color:color-mix(in srgb,var(--bg) 70%,transparent)}
+.wa-float{position:fixed;bottom:calc(70px + var(--safe-b));right:16px;z-index:95;width:56px;height:56px;border-radius:50%;background:#25D366;display:grid;place-items:center;animation:waPulse 2s ease-in-out infinite}
+.wa-float svg{width:28px;height:28px;fill:#fff}
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:200;opacity:0;visibility:hidden;transition:.3s}.overlay.open{opacity:1;visibility:visible}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(400px,100%);background:var(--card);z-index:210;transform:translateX(100%);transition:transform .35s cubic-bezier(.22,1,.36,1);display:flex;flex-direction:column}
+.drawer.open{transform:none}.drawer-h{padding:1.2rem 1.4rem;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}
+.drawer-body{flex:1;overflow-y:auto;padding:1rem 1.4rem}.drawer-f{padding:1rem 1.4rem calc(1rem + var(--safe-b));border-top:1px solid var(--line)}
+.modal{position:fixed;inset:0;z-index:220;background:var(--bg);overflow-y:auto;transform:translateY(100%);transition:transform .4s;visibility:hidden}
+.modal.open{transform:none;visibility:visible}
+.modal-close{position:sticky;top:12px;margin-left:12px;width:44px;height:44px;border-radius:50%;border:none;background:var(--card);box-shadow:var(--shadow);cursor:pointer}
+.modal-img{aspect-ratio:1;max-height:55vh;background:var(--bg2)}.modal-img img{width:100%;height:100%;object-fit:cover}
+.modal-body{padding:1.5rem 1.25rem 3rem}
+.form-g{display:grid;gap:.7rem}.form-g input,.form-g select,.form-g textarea{width:100%;padding:.7rem .9rem;border-radius:12px;border:1px solid var(--line);background:var(--bg);min-height:44px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:.7rem}
+#petals{position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.35}
+@media(min-width:768px){.nav-d{display:flex}.menu-btn{display:none}.nav-m{display:none}.wa-float{bottom:28px;right:28px}.footer{padding-bottom:2.5rem}.hero-grid{grid-template-columns:1.1fr .9fr}.cats{grid-template-columns:repeat(5,1fr)}.grid{grid-template-columns:repeat(3,1fr);gap:1.4rem}.why-grid{grid-template-columns:repeat(3,1fr)}.contact-box{grid-template-columns:1.2fr .8fr}}
+@media(min-width:1024px){.grid{grid-template-columns:repeat(4,1fr)}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style>
 </head>
 <body>
-  <div id="intro" class="intro">
-    <div class="intro-content">
-      <div class="intro-logo">
-        <img src="logo.png" alt="Maison Layali" class="intro-logo-img" />
-      </div>
-      <div class="intro-line"></div>
-      <p class="intro-tagline">Parfum & Beauté</p>
-      <p class="intro-sub">La sophistication à portée de main</p>
-    </div>
-    <div class="intro-progress"><div class="progress-bar"></div></div>
-  </div>
-
-  <a href="https://wa.me/33759531872" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
-    <svg viewBox="0 0 32 32" width="28" height="28" fill="#fff">
-      <path d="M16.002 2.004c-7.713 0-13.98 6.267-13.98 13.98 0 2.465.643 4.87 1.866 6.99L2 30l7.21-1.89a13.92 13.92 0 006.792 1.734h.006c7.713 0 13.98-6.267 13.98-13.98S23.715 2.004 16.002 2.004zm0 25.48h-.005a11.55 11.55 0 01-5.88-1.608l-.422-.25-4.394 1.152 1.173-4.285-.275-.44a11.56 11.56 0 01-1.775-6.16c0-6.39 5.2-11.59 11.59-11.59s11.59 5.2 11.59 11.59-5.2 11.59-11.59 11.59zm6.36-8.67c-.348-.174-2.06-1.016-2.38-1.132-.32-.116-.553-.174-.785.174s-.9 1.132-1.104 1.364c-.203.232-.406.261-.754.087-.348-.174-1.47-.542-2.8-1.728-1.035-.923-1.734-2.062-1.937-2.41-.203-.348-.022-.536.152-.71.156-.155.348-.406.522-.61.174-.203.232-.348.348-.58.116-.232.058-.435-.029-.61-.087-.174-.785-1.89-1.076-2.59-.283-.68-.57-.587-.785-.598h-.67c-.232 0-.61.087-.928.435s-1.22 1.192-1.22 2.906 1.25 3.37 1.423 3.603c.174.232 2.46 3.754 5.96 5.26.833.36 1.483.574 1.99.735.836.266 1.597.228 2.198.139.67-.1 2.06-.842 2.35-1.655.29-.813.29-1.51.203-1.655-.087-.145-.32-.232-.668-.406z"/>
-    </svg>
-  </a>
-
-  <div id="main" class="main hidden">
-    <header class="header">
-      <div class="container header-inner">
-        <a href="#" class="logo">
-          <img src="logo.png" alt="Maison Layali" class="logo-img" />
-          <span class="logo-text">Maison Layali</span>
-        </a>
-        <nav class="nav">
-          <a href="#produits">Produits</a>
-          <a href="#marques">Marques</a>
-          <a href="#contact">Contact</a>
-          <a href="https://wa.me/33759531872" class="btn-nav" target="_blank" rel="noopener">Commander</a>
-        </nav>
-        <button class="menu-toggle" id="menuToggle" aria-label="Menu">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </header>
-
-    <section class="hero">
-      <div class="hero-bg"></div>
-      <div class="container hero-content">
-        <div class="hero-text">
-          <span class="badge">Parfum & Beauté</span>
-          <h1>L'élégance de la beauté<br><em>chez Maison Layali</em></h1>
-          <p>Parfums orientaux exclusifs et soins dermo-cosmétiques premium.<br>Commandez facilement sur WhatsApp.</p>
-          <div class="hero-cta">
-            <a href="#produits" class="btn btn-primary">Voir les produits</a>
-            <a href="https://wa.me/33759531872" class="btn btn-outline" target="_blank" rel="noopener">WhatsApp</a>
-          </div>
-        </div>
-        <div class="hero-visual">
-          <div class="hero-card">
-            <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?w=700&q=80" alt="Parfums Maison Layali" />
-            <div class="hero-card-badge">Collection 2026</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="produits" class="products">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-label">Notre collection</span>
-          <h2>Parfums & Soins</h2>
-          <p>Sélection premium – Commandez en 1 clic sur WhatsApp</p>
-        </div>
-        <div class="filters">
-          <button class="filter-btn active" data-filter="all">Tout</button>
-          <button class="filter-btn" data-filter="parfum">Parfums</button>
-          <button class="filter-btn" data-filter="soin">Soins</button>
-        </div>
-        <div class="products-grid" id="productsGrid"></div>
-      </div>
-    </section>
-
-    <section id="marques" class="brands">
-      <div class="container">
-        <div class="section-header light">
-          <span class="section-label">Marques</span>
-          <h2>Nos références</h2>
-        </div>
-        <div class="brands-row">
-          <div class="brand-item">Maison Layali</div>
-          <div class="brand-item">La Roche-Posay</div>
-          <div class="brand-item">Avène</div>
-          <div class="brand-item">SVR</div>
-          <div class="brand-item">Nivea</div>
-          <div class="brand-item">Eucerin</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="advantages">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-label">Maison Layali</span>
-          <h2>Pourquoi nous choisir</h2>
-        </div>
-        <div class="advantages-grid">
-          <div class="adv-card"><div class="adv-icon">✨</div><h3>Parfums exclusifs</h3><p>Créations orientales et méditerranéennes signées Maison Layali.</p></div>
-          <div class="adv-card"><div class="adv-icon">📦</div><h3>Commande simple</h3><p>Un clic sur « Commander » et vous êtes sur WhatsApp.</p></div>
-          <div class="adv-card"><div class="adv-icon">🚚</div><h3>Livraison</h3><p>Livraison soignée. Contactez-nous pour les modalités.</p></div>
-          <div class="adv-card"><div class="adv-icon">💬</div><h3>Conseil personnalisé</h3><p>Notre équipe vous guide pour trouver le parfum ou le soin idéal.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="contact">
-      <div class="container contact-inner">
-        <div class="contact-text">
-          <h2>Contactez Maison Layali</h2>
-          <p>Commandez, posez une question ou venez nous rendre visite.</p>
-          <div class="contact-links">
-            <a href="https://wa.me/33759531872" class="btn btn-primary whatsapp" target="_blank" rel="noopener">WhatsApp : +33 7 59 53 18 72</a>
-            <a href="https://www.instagram.com/maisonlayali.officiel" class="btn btn-outline" target="_blank" rel="noopener">Instagram</a>
-            <a href="https://maps.app.goo.gl/Yc1eBNoe55sccPst6?g_st=ic" class="btn btn-outline" target="_blank" rel="noopener">Google Maps</a>
-          </div>
-        </div>
-        <div class="contact-card">
-          <img src="logo.png" alt="Maison Layali" class="contact-logo" />
-          <h3>Maison Layali</h3>
-          <p class="contact-tag">Perfume & Beauty</p>
-          <ul>
-            <li><strong>WhatsApp :</strong> +33 7 59 53 18 72</li>
-            <li><strong>Instagram :</strong> @maisonlayali.officiel</li>
-            <li><strong>Adresse :</strong> Voir sur Google Maps</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <footer class="footer">
-      <div class="container footer-inner">
-        <div class="footer-brand">
-          <img src="logo.png" alt="Maison Layali" class="footer-logo" />
-          <div><strong>Maison Layali</strong><p>Perfume & Beauty</p></div>
-        </div>
-        <div class="footer-social">
-          <a href="https://wa.me/33759531872" target="_blank" rel="noopener">WhatsApp</a>
-          <a href="https://www.instagram.com/maisonlayali.officiel" target="_blank" rel="noopener">Instagram</a>
-          <a href="https://maps.app.goo.gl/Yc1eBNoe55sccPst6?g_st=ic" target="_blank" rel="noopener">Maps</a>
-        </div>
-        <p class="footer-copy">© 2026 Maison Layali</p>
-      </div>
-    </footer>
-  </div>
-  <script src="logo-embed.js"></script>
-  <script src="script.js"></script>
+<div id="intro"><canvas id="introCanvas"></canvas>
+<div class="intro-inner"><div class="intro-logo"><img src="logo.png" alt="Maison Layali"/></div>
+<p class="intro-sig">Beauty in Bloom</p></div>
+<button class="intro-skip" type="button" id="skipIntro">Passer l'intro</button></div>
+<canvas id="petals"></canvas>
+<header class="header"><div class="container header-in">
+<button class="icon-btn menu-btn" id="menuOpen" aria-label="Menu">☰</button>
+<a href="#" class="logo"><img src="logo.png" alt=""/><span>Maison Layali</span></a>
+<nav class="nav-d"><a href="#boutique">Boutique</a><a href="#best">Best-sellers</a><a href="#pourquoi">À propos</a><a href="#trouver">Nous trouver</a></nav>
+<div class="hdr-actions">
+<button class="icon-btn" id="themeBtn" aria-label="Thème">◐</button>
+<button class="icon-btn" id="favBtn" aria-label="Favoris">♡<span class="badge-n" id="favCount" hidden>0</span></button>
+<button class="icon-btn" id="cartBtn" aria-label="Panier">BAG<span class="badge-n" id="cartCount" hidden>0</span></button>
+</div></div></header>
+<main>
+<section class="hero"><div class="container hero-grid"><div>
+<span class="hero-badge">Parfum & Beauté</span>
+<h1>Beauty in<br>Bloom</h1>
+<p>Maison Layali — parfums et cosmétiques d'exception. 20 Mars, Tunisie.</p>
+<div class="hero-cta"><a class="btn btn-primary" href="#boutique">Découvrir</a>
+<a class="btn btn-wa" href="https://wa.me/33759531872" target="_blank" rel="noopener">WhatsApp</a></div>
+</div>
+<div class="hero-visual"><img src="https://images.unsplash.com/photo-1595425970377-c9703cf48b6d?w=900&q=85" alt="Parfum" loading="eager"/></div>
+</div></section>
+<section><div class="container"><p class="sec-label">Collections</p><h2 class="sec-title">Catégories</h2><div class="cats" id="cats"></div></div></section>
+<section id="boutique"><div class="container">
+<p class="sec-label">Boutique</p><h2 class="sec-title">Toute la sélection</h2>
+<p class="sec-sub">Commande via WhatsApp — paiement à la livraison</p>
+<div class="toolbar">
+<input class="search-in" id="search" type="search" placeholder="Rechercher…"/>
+<button class="filter-chip active" data-cat="all">Tout</button>
+<button class="filter-chip" data-cat="parfum">Parfums</button>
+<button class="filter-chip" data-cat="soin">Soins</button>
+<button class="filter-chip" data-cat="solaire">Solaire</button>
+<button class="filter-chip" data-cat="maquillage">Maquillage</button>
+</div>
+<div class="grid" id="grid"></div></div></section>
+<section id="best"><div class="container"><p class="sec-label">Sélection</p><h2 class="sec-title">Best-sellers</h2><div class="grid" id="bestGrid"></div></div></section>
+<section id="pourquoi"><div class="container"><p class="sec-label">Maison Layali</p><h2 class="sec-title">Pourquoi nous</h2>
+<div class="why-grid">
+<div class="why-card"><span>✨</span><h3>Sélection premium</h3><p style="color:var(--muted);font-weight:300">Parfums et soins choisis avec exigence.</p></div>
+<div class="why-card"><span>💬</span><h3>Conseil & WhatsApp</h3><p style="color:var(--muted);font-weight:300">Commande simple, paiement à la livraison.</p></div>
+<div class="why-card"><span>📍</span><h3>Boutique à 20 Mars</h3><p style="color:var(--muted);font-weight:300">Avenue Mohamed V — Beauty in Bloom.</p></div>
+</div></div></section>
+<section id="trouver"><div class="container"><div class="contact-box"><div>
+<p class="sec-label">Nous trouver</p><h2 class="sec-title">Boutique & contact</h2>
+<p style="margin-bottom:1.2rem;color:var(--muted)"><strong style="color:var(--ink)">Maison Layali</strong><br/>Avenue Mohamed V<br/>4144 20 Mars, Tunisie</p>
+<div class="contact-links">
+<a class="btn btn-wa" href="https://wa.me/33759531872" target="_blank" rel="noopener">WhatsApp</a>
+<a class="btn btn-ghost" href="tel:+33759531872">Appeler</a>
+<a class="btn btn-ghost" href="https://maps.app.goo.gl/Yc1eBNoe55sccPst6?g_st=ic" target="_blank" rel="noopener">Itinéraire</a>
+<a class="btn btn-ghost" href="https://www.instagram.com/maisonlayali.officiel" target="_blank" rel="noopener">Instagram</a>
+</div></div>
+<div class="hero-visual" style="aspect-ratio:4/3;max-height:280px;animation:none"><img src="https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?w=700&q=80" alt="Boutique" loading="lazy"/></div>
+</div></div></section>
+</main>
+<footer class="footer"><div class="container" style="display:grid;gap:1rem">
+<strong>Maison Layali</strong>
+<p style="font-size:.9rem">Beauty in Bloom — Parfum & Beauté</p>
+<p style="font-size:.8rem;opacity:.6">© 2026 Maison Layali — 20 Mars, Tunisie</p>
+</div></footer>
+<nav class="nav-m"><a href="#" class="active">Accueil</a><a href="#boutique">Boutique</a><button type="button" id="mCart">Panier</button><a href="#trouver">Contact</a></nav>
+<a class="wa-float" href="https://wa.me/33759531872" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 32 32"><path d="M16.002 2.004c-7.713 0-13.98 6.267-13.98 13.98 0 2.465.643 4.87 1.866 6.99L2 30l7.21-1.89a13.92 13.92 0 006.792 1.734h.006c7.713 0 13.98-6.267 13.98-13.98S23.715 2.004 16.002 2.004zm0 25.48h-.005a11.55 11.55 0 01-5.88-1.608l-.422-.25-4.394 1.152 1.173-4.285-.275-.44a11.56 11.56 0 01-1.775-6.16c0-6.39 5.2-11.59 11.59-11.59s11.59 5.2 11.59 11.59-5.2 11.59-11.59 11.59zm6.36-8.67c-.348-.174-2.06-1.016-2.38-1.132-.32-.116-.553-.174-.785.174s-.9 1.132-1.104 1.364c-.203.232-.406.261-.754.087-.348-.174-1.47-.542-2.8-1.728-1.035-.923-1.734-2.062-1.937-2.41-.203-.348-.022-.536.152-.71.156-.155.348-.406.522-.61.174-.203.232-.348.348-.58.116-.232.058-.435-.029-.61-.087-.174-.785-1.89-1.076-2.59-.283-.68-.57-.587-.785-.598h-.67c-.232 0-.61.087-.928.435s-1.22 1.192-1.22 2.906 1.25 3.37 1.423 3.603c.174.232 2.46 3.754 5.96 5.26.833.36 1.483.574 1.99.735.836.266 1.597.228 2.198.139.67-.1 2.06-.842 2.35-1.655.29-.813.29-1.51.203-1.655-.087-.145-.32-.232-.668-.406z"/></svg></a>
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="cartDrawer"><div class="drawer-h"><h3 class="serif">Panier</h3><button class="icon-btn" id="cartClose">✕</button></div><div class="drawer-body" id="cartBody"></div><div class="drawer-f"><button class="btn btn-primary" style="width:100%" id="checkoutBtn">Commander WhatsApp</button></div></aside>
+<aside class="drawer" id="favDrawer"><div class="drawer-h"><h3 class="serif">Favoris</h3><button class="icon-btn" id="favClose">✕</button></div><div class="drawer-body" id="favBody"></div></aside>
+<div class="modal" id="productModal"><button class="modal-close" id="modalClose">✕</button><div class="modal-img"><img id="modalMainImg" alt=""/></div><div class="modal-body"><p class="card-brand" id="modalBrand"></p><h2 class="serif" id="modalName"></h2><p id="modalDesc" style="color:var(--muted);font-weight:300"></p><p id="modalPrice" style="font-size:1.2rem;font-weight:600;margin:1rem 0"></p><div style="display:flex;gap:.6rem;flex-wrap:wrap"><button class="btn btn-primary" id="modalAdd">Ajouter au panier</button><button class="btn btn-wa" id="modalWA">Commander WhatsApp</button></div></div></div>
+<aside class="drawer" id="checkDrawer"><div class="drawer-h"><h3 class="serif">Vos coordonnées</h3><button class="icon-btn" id="checkClose">✕</button></div><div class="drawer-body"><form class="form-g" id="orderForm">
+<div class="form-row"><div><label>Prénom</label><input name="prenom" required/></div><div><label>Nom</label><input name="nom" required/></div></div>
+<div><label>Téléphone</label><input name="tel" type="tel" required placeholder="+216 …"/></div>
+<div><label>Adresse</label><input name="adresse" required/></div>
+<div><label>Gouvernorat</label><select name="gouv" required id="gouv"></select></div>
+<div class="form-row"><div><label>Ville</label><input name="ville" required/></div><div><label>Code postal</label><input name="cp"/></div></div>
+<div><label>Notes</label><textarea name="notes" rows="2"></textarea></div>
+<button type="submit" class="btn btn-wa" style="width:100%">Envoyer la commande</button>
+</form></div></aside>
+<script>
+const WA="33759531872";
+const CATS=[{id:"parfum",label:"Parfums",icon:"🌸"},{id:"soin",label:"Soins",icon:"✨"},{id:"solaire",label:"Solaire",icon:"☀"},{id:"maquillage",label:"Maquillage",icon:"💄"},{id:"nouveautes",label:"Nouveautés",icon:"🆕"}];
+const GOUV=["Tunis","Ariana","Ben Arous","Manouba","Nabeul","Zaghouan","Bizerte","Béja","Jendouba","Le Kef","Siliana","Sousse","Monastir","Mahdia","Sfax","Kairouan","Kasserine","Sidi Bouzid","Gabès","Médenine","Tataouine","Gafsa","Tozeur","Kébili"];
+const PRODUCTS=[
+{id:"p1",name:"Oud Royal 100 ml",brand:"Maison Layali",category:"parfum",price:89,badge:"Signature",best:true,nouv:false,description:"Parfum oriental intense. Oud, rose et ambre.",image:"https://images.unsplash.com/photo-1595425970377-c9703cf48b6d?w=700&q=85"},
+{id:"p2",name:"Rose de Tunis 50 ml",brand:"Maison Layali",category:"parfum",price:65,badge:"Nouveau",best:true,nouv:true,description:"Rose de Damas, jasmin et musc blanc.",image:"https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=700&q=85"},
+{id:"p3",name:"Musc Blanc Intense",brand:"Maison Layali",category:"parfum",price:55,badge:null,best:true,nouv:false,description:"Musc tahara enrichi. Douceur pure.",image:"https://images.unsplash.com/photo-1594035910387-fea47794261f?w=700&q=85"},
+{id:"p4",name:"Fleur d'Oranger 50 ml",brand:"Maison Layali",category:"parfum",price:59,badge:"Best-seller",best:true,nouv:false,description:"Fleur d'oranger de Nabeul, bergamote.",image:"https://images.unsplash.com/photo-1615634260167-c8cdede054de?w=700&q=85"},
+{id:"p5",name:"Nuit d'Orient 100 ml",brand:"Maison Layali",category:"parfum",price:79,badge:null,best:false,nouv:false,description:"Santal, vanille, patchouli et oud.",image:"https://images.unsplash.com/photo-1588405748880-12d1d2a59db9?w=700&q=85"},
+{id:"p6",name:"Cicaplast Baume B5 40 ml",brand:"La Roche-Posay",category:"soin",price:49,badge:"Top vente",best:true,nouv:false,description:"Baume réparateur multi-usages.",image:"https://images.unsplash.com/photo-1556228720-195a672e8a03?w=700&q=85"},
+{id:"p7",name:"Cicalfate+ Crème 40 ml",brand:"Avène",category:"soin",price:35,badge:null,best:true,nouv:false,description:"Crème réparatrice protectrice.",image:"https://images.unsplash.com/photo-1620916567105-9bd87c4754d7?w=700&q=85"},
+{id:"p8",name:"Effaclar Duo+ 40 ml",brand:"La Roche-Posay",category:"soin",price:65,badge:null,best:false,nouv:false,description:"Soin anti-imperfections.",image:"https://images.unsplash.com/photo-1571781926291-c77df8097d8d?w=700&q=85"},
+{id:"p9",name:"Hydrating Cleanser 236 ml",brand:"CeraVe",category:"soin",price:42,badge:null,best:false,nouv:false,description:"Nettoyant hydratant 3 céramides.",image:"https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=700&q=85"},
+{id:"p10",name:"Anthelios UVMUNE 400 SPF50+",brand:"La Roche-Posay",category:"solaire",price:52,badge:"SPF50+",best:true,nouv:false,description:"Protection solaire ultra haute.",image:"https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?w=700&q=85"},
+{id:"p11",name:"Photoderm NUDE Touch SPF50+",brand:"Bioderma",category:"solaire",price:48,badge:"Nouveau",best:false,nouv:true,description:"Écran solaire teinté matifiant.",image:"https://images.unsplash.com/photo-1570194065650-d99fb4b38b17?w=700&q=85"},
+{id:"p12",name:"Sensibio H2O 250 ml",brand:"Bioderma",category:"soin",price:28,badge:null,best:true,nouv:false,description:"Eau micellaire peaux sensibles.",image:"https://images.unsplash.com/photo-1608248543801-ba25b21f53f7?w=700&q=85"},
+{id:"p13",name:"Rouge à lèvres mat",brand:"Maison Layali",category:"maquillage",price:32,badge:"Nouveau",best:false,nouv:true,description:"Rouge mat longue tenue.",image:"https://images.unsplash.com/photo-1586495777744-4413f2103256?w=700&q=85"},
+{id:"p14",name:"Palette yeux Nude",brand:"Maison Layali",category:"maquillage",price:45,badge:null,best:false,nouv:false,description:"6 teintes nude et rosées.",image:"https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=700&q=85"},
+{id:"p15",name:"Huile d'Argan pure 30 ml",brand:"Maison Layali",category:"soin",price:38,badge:null,best:false,nouv:false,description:"Huile d'argan pressée à froid.",image:"https://images.unsplash.com/photo-1608571423902-edd40371f31f?w=700&q=85"}
+];
+let cart=JSON.parse(localStorage.getItem("ml_cart")||"[]");
+let favs=JSON.parse(localStorage.getItem("ml_favs")||"[]");
+let currentCat="all",currentProduct=null;
+function priceLabel(p){return p.price!=null?p.price+" DT":"Prix sur demande"}
+function save(){localStorage.setItem("ml_cart",JSON.stringify(cart));localStorage.setItem("ml_favs",JSON.stringify(favs));updateBadges()}
+function updateBadges(){const cc=document.getElementById("cartCount"),fc=document.getElementById("favCount");const n=cart.reduce((a,i)=>a+i.qty,0);cc.hidden=!n;cc.textContent=n;fc.hidden=!favs.length;fc.textContent=favs.length}
+function waProduct(p){const msg=encodeURIComponent("Bonjour Maison Layali\nJe souhaite commander :\n• "+p.brand+" — "+p.name+"\n"+priceLabel(p)+"\nMerci !");window.open("https://wa.me/"+WA+"?text="+msg,"_blank")}
+function cardHTML(p){const isFav=favs.includes(p.id);return'<article class="card"><div class="card-img"><img src="'+p.image+'" alt="'+p.name+'" loading="lazy"/>'+(p.badge?'<span class="card-badge">'+p.badge+'</span>':'')+'<button class="card-fav" data-fav="'+p.id+'">'+(isFav?"♥":"♡")+'</button></div><div class="card-body"><div class="card-brand">'+p.brand+'</div><h3 class="card-name">'+p.name+'</h3><div class="card-price">'+priceLabel(p)+'</div><div class="card-actions"><button class="btn btn-ghost" data-view="'+p.id+'">Voir</button><button class="btn btn-wa" data-wa="'+p.id+'">Commander</button></div></div></article>'}
+function renderGrid(){const q=(document.getElementById("search").value||"").toLowerCase();let list=PRODUCTS.filter(function(p){if(currentCat==="nouveautes")return p.nouv;if(currentCat!=="all"&&p.category!==currentCat)return false;if(q&&!(p.name+" "+p.brand).toLowerCase().includes(q))return false;return true});document.getElementById("grid").innerHTML=list.map(cardHTML).join("")||"<p style='color:var(--muted)'>Aucun produit.</p>";document.getElementById("bestGrid").innerHTML=PRODUCTS.filter(function(p){return p.best}).map(cardHTML).join("");bindCards()}
+function bindCards(){document.querySelectorAll("[data-view]").forEach(function(b){b.onclick=function(){openProduct(b.dataset.view)}});document.querySelectorAll("[data-wa]").forEach(function(b){b.onclick=function(){var p=PRODUCTS.find(function(x){return x.id===b.dataset.wa});if(p)waProduct(p)}});document.querySelectorAll("[data-fav]").forEach(function(b){b.onclick=function(e){e.stopPropagation();var id=b.dataset.fav;if(favs.includes(id))favs=favs.filter(function(x){return x!==id});else favs.push(id);save();renderGrid()}})}
+function openProduct(id){var p=PRODUCTS.find(function(x){return x.id===id});if(!p)return;currentProduct=p;document.getElementById("modalBrand").textContent=p.brand;document.getElementById("modalName").textContent=p.name;document.getElementById("modalDesc").textContent=p.description;document.getElementById("modalPrice").textContent=priceLabel(p);document.getElementById("modalMainImg").src=p.image;document.getElementById("productModal").classList.add("open");document.body.style.overflow="hidden"}
+function closeModal(){document.getElementById("productModal").classList.remove("open");document.body.style.overflow=""}
+function renderCart(){var body=document.getElementById("cartBody");if(!cart.length){body.innerHTML="<p style='color:var(--muted)'>Panier vide.</p>";return}body.innerHTML=cart.map(function(item){var p=PRODUCTS.find(function(x){return x.id===item.id});if(!p)return"";return'<div style="display:flex;gap:.8rem;padding:.8rem 0;border-bottom:1px solid var(--line)"><img src="'+p.image+'" style="width:64px;height:64px;object-fit:cover;border-radius:10px"/><div><strong>'+p.name+'</strong><div>'+priceLabel(p)+'</div><div>x'+item.qty+'</div></div></div>'}).join("")}
+function openDrawer(id){document.getElementById("overlay").classList.add("open");document.getElementById(id).classList.add("open")}
+function closeDrawers(){document.getElementById("overlay").classList.remove("open");document.querySelectorAll(".drawer").forEach(function(d){d.classList.remove("open")})}
+function runIntro(){if(sessionStorage.getItem("ml_intro")){document.getElementById("intro").classList.add("hide");return}var c=document.getElementById("introCanvas"),ctx=c.getContext("2d");var w,h,petals=[];function resize(){w=c.width=innerWidth;h=c.height=innerHeight}resize();addEventListener("resize",resize);for(var i=0;i<28;i++)petals.push({x:Math.random()*w,y:Math.random()*h,r:4+Math.random()*8,s:.3+Math.random(),a:Math.random()*6,va:.01+Math.random()*.02});function draw(){if(document.getElementById("intro").classList.contains("hide"))return;ctx.clearRect(0,0,w,h);petals.forEach(function(p){p.y+=p.s;p.a+=p.va;p.x+=Math.sin(p.a)*.4;if(p.y>h+20){p.y=-20;p.x=Math.random()*w}ctx.save();ctx.translate(p.x,p.y);ctx.rotate(p.a);ctx.fillStyle="rgba(201,160,154,.55)";ctx.beginPath();ctx.ellipse(0,0,p.r,p.r*.6,0,0,Math.PI*2);ctx.fill();ctx.restore()});requestAnimationFrame(draw)}requestAnimationFrame(draw);var end=function(){document.getElementById("intro").classList.add("hide");sessionStorage.setItem("ml_intro","1")};document.getElementById("skipIntro").onclick=end;setTimeout(end,5500)}
+function ambientPetals(){if(matchMedia("(prefers-reduced-motion:reduce)").matches||matchMedia("(max-width:700px)").matches)return;var c=document.getElementById("petals"),ctx=c.getContext("2d");var w,h,ps=[];function resize(){w=c.width=innerWidth;h=c.height=innerHeight}resize();addEventListener("resize",resize);for(var i=0;i<12;i++)ps.push({x:Math.random()*w,y:Math.random()*h,r:3+Math.random()*5,s:.15+Math.random()*.4,a:Math.random()*6});function loop(){ctx.clearRect(0,0,w,h);ps.forEach(function(p){p.y+=p.s;p.a+=.008;p.x+=Math.sin(p.a)*.25;if(p.y>h)p.y=-10;ctx.save();ctx.translate(p.x,p.y);ctx.rotate(p.a);ctx.fillStyle="rgba(201,160,154,.25)";ctx.beginPath();ctx.ellipse(0,0,p.r,p.r*.55,0,0,Math.PI*2);ctx.fill();ctx.restore()});requestAnimationFrame(loop)}requestAnimationFrame(loop)}
+document.getElementById("cats").innerHTML=CATS.map(function(c){return'<button type="button" class="cat" data-c="'+c.id+'"><span>'+c.icon+'</span><strong>'+c.label+'</strong></button>'}).join("");
+document.querySelectorAll(".cat").forEach(function(b){b.onclick=function(){currentCat=b.dataset.c;document.getElementById("boutique").scrollIntoView({behavior:"smooth"});renderGrid()}});
+document.querySelectorAll(".filter-chip").forEach(function(b){b.onclick=function(){currentCat=b.dataset.cat;document.querySelectorAll(".filter-chip").forEach(function(x){x.classList.toggle("active",x===b)});renderGrid()}});
+document.getElementById("search").oninput=function(){renderGrid()};
+document.getElementById("cartBtn").onclick=document.getElementById("mCart").onclick=function(){renderCart();openDrawer("cartDrawer")};
+document.getElementById("favBtn").onclick=function(){document.getElementById("favBody").innerHTML=PRODUCTS.filter(function(p){return favs.includes(p.id)}).map(cardHTML).join("")||"<p style='color:var(--muted)'>Aucun favori.</p>";bindCards();openDrawer("favDrawer")};
+document.getElementById("cartClose").onclick=document.getElementById("favClose").onclick=document.getElementById("checkClose").onclick=closeDrawers;
+document.getElementById("overlay").onclick=closeDrawers;document.getElementById("modalClose").onclick=closeModal;
+document.getElementById("modalAdd").onclick=function(){if(!currentProduct)return;var it=cart.find(function(x){return x.id===currentProduct.id});if(it)it.qty++;else cart.push({id:currentProduct.id,qty:1});save();closeModal();renderCart();openDrawer("cartDrawer")};
+document.getElementById("modalWA").onclick=function(){if(currentProduct)waProduct(currentProduct)};
+document.getElementById("checkoutBtn").onclick=function(){if(!cart.length)return;closeDrawers();openDrawer("checkDrawer")};
+var gSel=document.getElementById("gouv");GOUV.forEach(function(g){var o=document.createElement("option");o.value=g;o.textContent=g;gSel.appendChild(o)});
+document.getElementById("orderForm").onsubmit=function(e){e.preventDefault();var fd=new FormData(e.target);var lines=cart.map(function(item){var p=PRODUCTS.find(function(x){return x.id===item.id});return"• "+(p?p.brand+" "+p.name:"")+" x"+item.qty+" — "+(p?priceLabel(p):"")});var msg=["Nouvelle commande Maison Layali","Prénom: "+fd.get("prenom"),"Nom: "+fd.get("nom"),"Tél: "+fd.get("tel"),"Adresse: "+fd.get("adresse"),"Gouvernorat: "+fd.get("gouv"),"Ville: "+fd.get("ville"),"CP: "+fd.get("cp"),"Notes: "+fd.get("notes"),"","Articles:"].concat(lines).join("\n");window.open("https://wa.me/"+WA+"?text="+encodeURIComponent(msg),"_blank")};
+document.getElementById("themeBtn").onclick=function(){var h=document.documentElement;h.dataset.theme=h.dataset.theme==="dark"?"light":"dark";localStorage.setItem("ml_theme",h.dataset.theme)};
+if(localStorage.getItem("ml_theme")==="dark")document.documentElement.dataset.theme="dark";
+updateBadges();renderGrid();runIntro();ambientPetals();
+</script>
 </body>
 </html>
